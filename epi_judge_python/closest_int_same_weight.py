@@ -1,14 +1,15 @@
 from test_framework import generic_test
 
 def closest_int_same_bit_count(x: int) -> int:
+    pass
     # TODO - you fill in here.
     
-    for i in range(63):
+    # for i in range(63):
         
-        if ((x>>i&1) ^ (x>>(i+1)&1)):
-            return x^ (1<<i |1 <<(i+1))
+    #     if ((x>>i&1) ^ (x>>(i+1)&1)):
+    #         return x^ (1<<i |1 <<(i+1))
     
-    raise ValueError("All bits are 0 or 1")
+    # raise ValueError("All bits are 0 or 1")
         
     
 
