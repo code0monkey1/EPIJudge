@@ -12,17 +12,29 @@ mem=[0]*2**16
 # Hint: lJse a lookup table, but don't use 264 entries!
 
 def pre_compute():
-    for i in range(2**16):
-        mem[i]=_parity(i)
+    
+    for i in range(0,2**16):
+        mem[i] = _parity(i)
+        
+    
+    
+    # for i in range(2**16):
+    #     mem[i]=_parity(i)
         
     
 
 def _parity(num):
-    result =0
+    summ=0
     while num:
-        result^=1
-        num=(num &(num-1))
-    return result
+        summ^=1
+        num&=(num-1)
+    return summ
+    
+    # result =0
+    # while num:
+    #     result^=1
+    #     num=(num &(num-1))
+    # return result
     
 # memo = [0]*(2**16)
 
@@ -43,12 +55,14 @@ def _parity(num):
 
 def parity(x: int) -> int:
     # TODO - you fill in here.
-    n=32
-     
-    while n:
-        x^=(x>>n)
-        n//=2
-    return x&1
+    result =0
+    div=16
+    mask=(2**16)-1
+    
+    for i in range(0,4):
+        result^=mem[(x>>(div*i)) & mask]
+    
+    return result   
         
     
    
