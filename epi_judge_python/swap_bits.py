@@ -4,13 +4,15 @@ from test_framework import generic_test
 def swap_bits(x, i, j): # quite easy
     # TODO - you fill in here.
     
-    is_different=(x>>i & 1) ^ ( x>>j & 1)
+    if (x>>i)&1 ^ (x>>j)&1:
+        x^=(1<<i)| (1<<j)
+    # is_different=(x>>i & 1) ^ ( x>>j & 1)
     
-    if is_different:
-        bit_mask = 1<<i | 1<<j
-        return x ^ bit_mask
+    # if is_different:
+    #     bit_mask = 1<<i | 1<<j
+    #     return x ^ bit_mask
     
-    return x
+    # return x
     
     # is_different=(x>>i & 1) ^ (x>>j & 1)
     
