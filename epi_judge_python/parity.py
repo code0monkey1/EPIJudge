@@ -55,14 +55,21 @@ def _parity(num):
 
 def parity(x: int) -> int:
     # TODO - you fill in here.
-    result =0
-    div=16
-    mask=(2**16)-1
     
-    for i in range(0,4):
-        result^=mem[(x>>(div*i)) & mask]
+    result = 0
+    while x:
+        result^=(x & 1)
+        x>>=1
+    return result
+        
+    # result =0
+    # div=16
+    # mask=(2**16)-1
     
-    return result   
+    # for i in range(0,4):
+    #     result^=mem[(x>>(div*i)) & mask]
+    
+    # return result   
         
     
    
