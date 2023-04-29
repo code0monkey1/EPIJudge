@@ -2,9 +2,8 @@
 
 ## _Count the number of bits that are set to 1 in a `non-negative integer`_
 
-`def count_bits(x: int) -> int:`
+> `def count_bits(x: int) -> int:`
 
----
 ### Brute Force 
 
 <details>
