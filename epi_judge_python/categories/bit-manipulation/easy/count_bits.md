@@ -1,7 +1,7 @@
 ## Count the number of bits that are set to 1 in a `non-negative integer`
 
 `count_bits`
-#### Brute Force [ O(n) , where n is the number of bits used to represent the number ]
+#### Brute Force 
 
 <details>
 <summary>Hint</summary>
@@ -10,6 +10,12 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
 
 </details>
 
+<details>
+<summary>Time Complexity</summary>
+
+ _[ O(n) , where n is the number of bits used to represent the number ]_
+
+</details>
 <details>
 
 <summary> Bruite Force Solution </summary>
