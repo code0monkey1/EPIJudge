@@ -4,6 +4,8 @@ from test_framework import generic_test
 
 # Optimized 1 : Do in O(m) , where m is the number of set bits in integer ( Eg : 12 ( 1110 ) has 2 set bits , so m = 2 )
 
+# Optimized 3 : Do in O(m) * k
+
 def count_bits(x: int) -> int:
  pass
 
