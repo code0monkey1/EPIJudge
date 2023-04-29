@@ -10,15 +10,17 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
 
 </details>
 
+
+<details>
+
+<summary> Brute Force Solution </summary>
+
 <details>
 <summary>Time Complexity</summary>
 
  _[ O(n) , where n is the number of bits used to represent the number ]_
 
 </details>
-<details>
-
-<summary> Bruite Force Solution </summary>
 
 ```python
       def count_bits(x: int) -> int:
@@ -37,9 +39,6 @@ Time Complexity : `O(n), where n is the number of bits needed to represent the i
 ---
 
 #### Optimization 1 [O(m) , where m is the number of set bits] : 
-
-
-
 
 <details>
 <summary> Hint 1 </summary>
