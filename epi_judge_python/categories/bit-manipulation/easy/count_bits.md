@@ -34,18 +34,21 @@ Time Complexity : `O(n), where n is the number of bits needed to represent the i
 #### Optimization 1 [O(m) , where m is the number of set bits] : 
 
 
-_Do the same by only counting the `set bits`_
+
 
 <details>
 <summary> Hint 1 </summary>
 
- _x&(x-1) drops the lowest set bit of x_
+ + Do the same by only counting the `set bits
 
-_Eg: if x= 110 , then x&(X-1) gives 100, i.e the rightmost set-bit is removed_
+ + x&(x-1) drops the lowest set bit of x
+
+ + Eg: if x= 110 , then x&(X-1) gives 100, i.e the rightmost set-bit is removed
 
 </details>
 
->  
+<details>
+<summary> Solution </summary>
 
 ```python
   
@@ -59,5 +62,6 @@ _Eg: if x= 110 , then x&(X-1) gives 100, i.e the rightmost set-bit is removed_
        return count
     
 ```
+</details>
 
 Time Complexity : `O(Number of Set Bits in (x)) `
