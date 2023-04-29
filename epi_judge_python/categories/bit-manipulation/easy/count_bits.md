@@ -3,11 +3,8 @@
 #### Brute Force : 
 _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if it was , then shift the original number one to the right . Do this till the number is non-zero_
 
-  <details>
-  
-    ```python
-    
-           
+<details>
+```python   
     
       def count_bits(x: int) -> int:
            count =0
@@ -18,9 +15,8 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
           
            return count
           
-    ```
-  
-  </details>
+```
+</details>
 
 Time Complexity : `O(n), where n is the number of bits needed to represent the integer. Eg: 4 bits are needed to represent the integer 12 ( 1100 )`
 
