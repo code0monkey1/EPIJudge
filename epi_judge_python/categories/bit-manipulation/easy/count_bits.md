@@ -4,6 +4,7 @@
 _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if it was , then shift the original number one to the right . Do this till the number is non-zero_
 
 <details>
+
 ```python   
     
       def count_bits(x: int) -> int:
