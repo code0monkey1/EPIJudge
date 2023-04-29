@@ -43,13 +43,26 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
 ### Optimization : *Can you make the run time better ?* 
 
 <details>
-<summary> Hint 1 </summary>
+<summary> Hint 1  </summary>
 
- + Only counting the `set bits`
+  _Only counting the `set bits`_
 
- + x&(x-1) drops the lowest set bit of x
 
- + Eg: if x= 110 , then x&(X-1) gives 100, i.e the rightmost set-bit is removed
+</details>
+
+<details>
+<summary> Hint 2 </summary>
+
+  _x&(x-1) drops the lowest set bit of x_
+
+</details>
+
+<details>
+
+<summary> Hint 3 </summary>
+
+
+   _Eg: if x= 110 , then x&(X-1) gives 100, i.e the rightmost set-bit is removed_
 
 </details>
 
