@@ -11,10 +11,10 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
 </details>
 
 <details>
+
 <summary> Bruite Force Solution </summary>
 
-```python   
-    
+```python
       def count_bits(x: int) -> int:
            count =0
            
@@ -22,8 +22,7 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
                count += x&1
                x>> = 1
           
-           return count
-          
+           return count       
 ```
 </details>
 
