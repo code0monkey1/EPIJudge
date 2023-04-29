@@ -15,7 +15,7 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
 
 <details>
 
-<summary> Brute Force Solution </summary>
+<summary> Solution </summary>
 
 ```python
       def count_bits(x: int) -> int:
