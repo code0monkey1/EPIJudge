@@ -1,6 +1,5 @@
+# count_bits
 ## _Count the number of bits that are set to 1 in a `non-negative integer`_
-
-`count_bits`
 ### Brute Force 
 
 <details>
