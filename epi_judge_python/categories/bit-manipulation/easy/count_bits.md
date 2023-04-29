@@ -10,17 +10,9 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
 
 </details>
 
-
 <details>
 
 <summary> Brute Force Solution </summary>
-
-<details>
-<summary>Time Complexity</summary>
-
- _[ O(n) , where n is the number of bits used to represent the number ]_
-
-</details>
 
 ```python
       def count_bits(x: int) -> int:
@@ -32,18 +24,25 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
           
            return count       
 ```
+
 </details>
 
-Time Complexity : `O(n), where n is the number of bits needed to represent the integer. Eg: 4 bits are needed to represent the integer 12 ( 1100 )`
+<details>
+<summary>Time Complexity</summary>
+
+ _O(n), where n is the number of bits needed to represent the integer. Eg: 4 bits are needed to represent the integer 12 ( 1100 )_
+
+</details>
+
 
 ---
 
-#### Optimization 1 [O(m) , where m is the number of set bits] : 
+#### Optimization : Can you make the run time better ?  : 
 
 <details>
 <summary> Hint 1 </summary>
 
- + Do the same by only counting the `set bits
+ + Only counting the `set bits`
 
  + x&(x-1) drops the lowest set bit of x
 
@@ -54,18 +53,24 @@ Time Complexity : `O(n), where n is the number of bits needed to represent the i
 <details>
 <summary> Solution </summary>
 
-```python
-  
-  def count_bits(x: int) -> int:
-       count =0
-       
-       while x:
-           count += 1
-           x&=(x-1)
-      
-       return count
+  ```python
     
-```
+    def count_bits(x: int) -> int:
+         count =0
+         
+         while x:
+             count += 1
+             x&=(x-1)
+        
+         return count
+      
+  ```
+
 </details>
 
-Time Complexity : `O(Number of Set Bits in (x)) `
+<details>
+<summary>Time Complexity</summary>
+
+_O(Number of Set Bits in (x))_
+
+</details>
