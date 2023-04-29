@@ -16,7 +16,7 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
       
 ```
 
-Time Complexity : `O(n), where n is the number of bits in the original number`
+Time Complexity : `O(n), where n is the number of bits needed to represent the integer. Eg: 4 bits are needed to represent the integer 12 ( 1100 )`
 
 ---
 
