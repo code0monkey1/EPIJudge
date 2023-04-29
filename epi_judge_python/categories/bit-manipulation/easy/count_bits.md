@@ -45,7 +45,7 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
 <details>
 <summary> Hint 1  </summary>
 
-  _Only counting the `set bits`_
+  _Only count the `set bits`_
 
 
 </details>
@@ -53,7 +53,7 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
 <details>
 <summary> Hint 2 </summary>
 
-  _x&(x-1) drops the lowest set bit of x_
+  _`x&(x-1)` drops the lowest set bit of x_
 
 </details>
 
