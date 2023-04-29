@@ -1,4 +1,4 @@
-## Count the number of bits that are set to 1 in a `non-negative integer`
+# Count the number of bits that are set to 1 in a `non-negative integer`
 
 `count_bits`
 ## Brute Force 
