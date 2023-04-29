@@ -1,7 +1,7 @@
 ## Count the number of bits that are set to 1 in a `non-negative integer`
 
 `count_bits`
-#### Brute Force 
+## Brute Force 
 
 <details>
 <summary>Hint</summary>
@@ -37,7 +37,7 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
 
 ---
 
-#### Optimization : *Can you make the run time better ?* 
+## Optimization : *Can you make the run time better ?* 
 
 <details>
 <summary> Hint 1 </summary>
