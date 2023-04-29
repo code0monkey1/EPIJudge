@@ -25,7 +25,7 @@ Time Complexity : `O(n), where n is the number of bits needed to represent the i
 
 _Do the same by only counting the `set bits`_
 
-> Hint : x&(X-1) gives a number with the first rightmost set-bit removed from x
+> Hint : x&(x-1) drops the lowest set bit of x
 > 
 >  Eg: if x= 110 , then x&(X-1) gives 100, i.e the rightmost set-bit is removed
 
