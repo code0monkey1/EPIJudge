@@ -1,7 +1,8 @@
 from test_framework import generic_test
 
-# Do in O(n) , where n is the number of bits to  represent integer (Eg: 12 ( 1100 ) needs 4 
-# bits to represent integer , so here n = 4)
+# Basic : Do in O(n) , where n is the number of bits to  represent integer (Eg: 12 ( 1100 ) needs 4 bits to represent integer , so here n = 4)
+
+# Optimized 1 : Do in O(m) , where m is the number of set bits in integer ( Eg : 12 ( 1110 ) has 2 set bits , so m = 2 )
 
 def count_bits(x: int) -> int:
  pass
