@@ -85,8 +85,8 @@ _See if the rightmost bit is set to 1 in x by doing ( x & 1 ) , count +1 it if i
 </details>
 
 <details>
-<summary>Time Complexity</summary>
-
-_O(Number of Set Bits in (x))_
+  <summary>Time Complexity</summary>
+  
+  _O(Number of Set Bits in (x))_
 
 </details>
