@@ -7,7 +7,11 @@ from test_framework import generic_test
 # Optimized 3 : Do in O(m) * k
 
 def count_bits(x: int) -> int:
- pass
+    count =0
+    while x:
+        count+=(x&1)
+        x>>= 1
+    return count
 
 
 if __name__ == '__main__':
