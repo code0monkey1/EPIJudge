@@ -9,7 +9,7 @@ mem=[0]*2**16
 # It is fairly straightforward to write code that computes the parity of a single 64-bit word.
 # How would you compute the parity of a very large number of 64-bit words?
 
-# Hint: lJse a lookup table, but don't use 264 entries!
+# Hint: Use a lookup table, but don't use 264 entries!
 
 def pre_compute():
     
@@ -58,8 +58,8 @@ def parity(x: int) -> int:
     
     result = 0
     while x:
-        result^=(x & 1)
-        x>>=1
+        x=(x & (x-1))
+        result^=1
     return result
         
     # result =0
