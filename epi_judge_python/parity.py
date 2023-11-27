@@ -1,5 +1,4 @@
 from test_framework import generic_test
-mem=[0]*2**16
 
 # The parity of a binary word is 1 if the number of 1s in the word is odd; otherwise, 
 # it is 0. 
@@ -11,103 +10,24 @@ mem=[0]*2**16
 
 # Hint: Use a lookup table, but don't use 264 entries!
 
+mem=[0]*(2**16)
+
 def pre_compute():
-    
-    for i in range(0,2**16):
+    for i in range(2**16):
         mem[i] = _parity(i)
-        
-    
-    
-    # for i in range(2**16):
-    #     mem[i]=_parity(i)
-        
     
 
-def _parity(num):
-    summ=0
-    while num:
-        summ^=1
-        num&=(num-1)
-    return summ
-    
-    # result =0
-    # while num:
-    #     result^=1
-    #     num=(num &(num-1))
-    # return result
-    
-# memo = [0]*(2**16)
+def parity(x):
+    x^= x>>32
+    x^= x>>16
+    x^= x>>8
+    x^= x>>4
+    x^= x>>2
+    x^= x>>1
 
-# def pre_compute():
-#     for i in range(2**16):
-#         memo[i] =single_parity(i)
-
-# def single_parity(x):
+    return x & 1
     
-#     parity=0
-    
-#     while x:
-#         parity^=1
-#         x&=(x-1)
-        
-#     return parity
-    
-
-def parity(x: int) -> int:
-    # TODO - you fill in here.
-    
-    result = 0
-    while x:
-        x=(x & (x-1))
-        result^=1
-    return result
-        
-    # result =0
-    # div=16
-    # mask=(2**16)-1
-    
-    # for i in range(0,4):
-    #     result^=mem[(x>>(div*i)) & mask]
-    
-    # return result   
-        
-    
-   
-    
-    # parity=0
-    
-    # while x:
-    #     parity^=(x&1)
-    #     x>>=1
-    
-    # return parity
-     
-    #  bit_mask=(2**16)-1
-     
-    #  bit_shift=16
-     
-     
-    #  return mem[x>>bit_shift*3 & bit_mask]^\
-    #         mem[x>>bit_shift*2 & bit_mask]^\
-    #         mem[x>>bit_shift & bit_mask]^\
-    #         mem[x & bit_mask]
-     
-   
-    # bit_mask=(2**16)-1
-    # bit_shift=16
-    
-    # return memo[x>>(bit_shift*3)] ^ memo[(x>>(bit_shift*2))&bit_mask] ^ memo[(x>>bit_shift)&bit_mask] ^ memo[x & bit_mask]
-    
-    # n =32
-    
-    # while n:
-    #     x ^=(x >>n)
-    #     n//=2
-    
-    # return x&1
-        
-  
 
 if __name__ == '__main__':
-    pre_compute()
+    # pre_compute()
     exit(generic_test.generic_test_main('parity.py', 'parity.tsv', parity))
