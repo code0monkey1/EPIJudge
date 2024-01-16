@@ -1,17 +1,23 @@
 from test_framework import generic_test
 
 def closest_int_same_bit_count(x: int) -> int:
-    pass
-    # TODO - you fill in here.
+ unsigned=64
+
+ for i in range(unsigned-1):
+    #if ith bit is different from jth bit, wap
+    if ( (x>>i) & 1 ) ^ ( (x>>(i+1))&1 ):
+       return swap(i,i+1,x)
     
-    # for i in range(63):
-        
-    #     if ((x>>i&1) ^ (x>>(i+1)&1)):
-    #         return x^ (1<<i |1 <<(i+1))
-    
-    # raise ValueError("All bits are 0 or 1")
-        
-    
+ #Raise error if all bits are zero or one 
+ raise ValueError("All bits are 0 or 1")
+
+def swap(i,j,x):
+    mask = 1<<i | 1<<j
+    x^=mask
+    return x
+
+
+
 
 if __name__ == '__main__':
     exit(

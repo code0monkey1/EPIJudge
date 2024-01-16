@@ -3,11 +3,19 @@ from test_framework import generic_test
 
 def count_bits(x: int) -> int:
 
-    num_bits = 0
+    tot=0
+
     while x:
-        num_bits += x & 1
-        x >>= 1
-    return num_bits
+        tot+=1
+        x&=(x-1)
+    
+    return tot
+
+    # num_bits = 0
+    # while x:
+    #     num_bits += x & 1
+    #     x >>= 1
+    # return num_bits
 
 
 if __name__ == '__main__':

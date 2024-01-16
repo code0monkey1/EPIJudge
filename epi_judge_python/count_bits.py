@@ -7,13 +7,15 @@ from test_framework import generic_test
 # Optimized 3 : Do in O(m) * k
 
 def count_bits(x: int) -> int:
-    count =0
-    while x:
-        count+=1
-        x = (x & (x-1))
-    return count
+     
+     ct =0
 
-
+     while x:
+          x&=(x-1)
+          ct+=1
+          
+     return ct
+     
 if __name__ == '__main__':
     exit(
         generic_test.generic_test_main('count_bits.py', 'count_bits.tsv',

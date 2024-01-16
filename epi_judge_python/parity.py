@@ -11,23 +11,37 @@ from test_framework import generic_test
 # Hint: Use a lookup table, but don't use 264 entries!
 
 mem=[0]*(2**16)
+flag=2**16-1
 
 def pre_compute():
     for i in range(2**16):
         mem[i] = _parity(i)
     
 
-def parity(x):
-    x^= x>>32
-    x^= x>>16
-    x^= x>>8
-    x^= x>>4
-    x^= x>>2
-    x^= x>>1
+def _parity(x):
+    power= 32
 
-    return x & 1
+    while power:
+       x^=(x>>power)
+       power//=2
     
+    return x&1
+
+def parity(x):
+    pow=32
+
+    while pow:
+        x^=(x>>pow)
+        pow//=2
+    
+    return x&1
+
+
+    # res= (_parity(x&(flag)) ^ _parity((x>>16)&(flag)) ^_parity( (x>>(16*2))&(flag)) \
+    # ^_parity( (x>>(16*3))&(flag)))
+    # return res & 1
+ 
 
 if __name__ == '__main__':
-    # pre_compute()
+    pre_compute()
     exit(generic_test.generic_test_main('parity.py', 'parity.tsv', parity))
