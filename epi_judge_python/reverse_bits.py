@@ -1,8 +1,20 @@
 
 from test_framework import generic_test
-
+arr = [0]*(2**16)
 # memo =[0]*2**16
+def rev_bits(n:int)->int:
+        res = 0
+        for i in range(16):
+            res<<=1
+            if n&1:
+                res+=1
+            n>>=1
+        return res
 
+def pre_compute():
+        for i in range(2**16):
+            arr[i]=rev_bits(i)
+    
 # def swap_bits(digit,j,k):
 #     if ( ((digit>>j )&1 )^ ((digit>>k) &1) ):
 #         digit^= 1<<j | 1<<k
@@ -23,15 +35,15 @@ from test_framework import generic_test
 #     for i in range(2**16):
 #         memo[i]=reverse(i)
 
-def reverse_bits(digit):
+def reverse_bits(n):
     
-    tot=0
-
-    for i in range(64):
-        tot=(tot<<1)+(digit&1)
-        digit>>=1
-    
-    return tot
+    res=0
+    for i in range(4):
+        temp = n>>(16*i)
+        mask = arr[temp & ((2**16)-1)]
+        res = (res<<16) | mask
+        
+    return res
 
     #  res=0
     #  for _i in range(64):
@@ -110,7 +122,7 @@ def reverse_bits(digit):
 
 
 if __name__ == '__main__':
-
+    pre_compute()
     exit(
         generic_test.generic_test_main('reverse_bits.py', 'reverse_bits.tsv',
                                        reverse_bits))
